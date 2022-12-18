@@ -2,7 +2,7 @@
 
 **My solutions to Advent of Code 2022 problems**
 
-## Information
+## Description
 
 This is my first year attempting [Advent of Code](https://adventofcode.com) having only recently discovered it and hope to participate in the years to come. I may solve problems from previous years in the near future.
 
