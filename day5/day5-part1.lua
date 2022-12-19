@@ -1,17 +1,17 @@
 local util = require("../util/util")
 
 
-local stacks = {}
 local top = ""
 
 
 do
     local input = util.read(5)
+    local stacks = {}
 
     local rows, cols
     cols = tonumber(input:match("%s(%d)%s\r\n"))
 
-    for i, l in ipairs(util.split(util.read(5), "\r?\n")) do
+    for i, l in ipairs(util.split(input, "\r?\n")) do
         if rows == nil then
             -- we check if we found collumn headings and that is the line number which equals the number of rows + 1
             if l:match("^%s%d%s") then
