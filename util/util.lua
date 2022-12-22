@@ -5,7 +5,7 @@ local F = string.format
 
 
 local function read(day)
-    return require("fs").readFileSync(F("./day%d/day%d.txt", day, day))
+    return fs.readFileSync(F("./day%d/day%d.txt", day, day))
 end
 
 local function split(input, sep)
