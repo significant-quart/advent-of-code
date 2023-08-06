@@ -13,6 +13,8 @@ do
 
         if #seen >= 2 then
             for y = 1, #seen - 1 do
+
+                -- only clear seen characters up to the duplicate
                 if seen[y] == char then
                     for z = 1, y do
                         table.remove(seen, 1)

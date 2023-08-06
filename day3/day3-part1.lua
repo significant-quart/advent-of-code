@@ -12,7 +12,7 @@ do
         for y = 1, #l do
             local char = l:sub(y, y)
 
-            -- first have index char else if past midpoint and char exists it is added to the priority
+            -- first half index char otherwise if past the midpoint and char exists add it to the priority
             if indexedChars[char] and y > midPoint then
                 local charByte = string.byte(char)
 

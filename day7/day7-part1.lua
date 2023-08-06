@@ -13,7 +13,7 @@ do
 
     local currentDir = fs
 
-    local command, arg, size
+    local command, arg, size, tempCurrentDir
 
     for i, l in ipairs(util.split(util.read(7), "\r\n")) do
         command, arg = l:match("^[$ ]*(%w+)%s?(.*)")
@@ -41,7 +41,8 @@ do
             if size then
                 currentDir["size"] = currentDir["size"] + size
 
-                local tempCurrentDir = currentDir
+                -- update size of all parent directories
+                tempCurrentDir = currentDir
                 while tempCurrentDir["parent"] ~= nil do
                     tempCurrentDir["parent"]["size"] = tempCurrentDir["parent"]["size"] + size
                     tempCurrentDir = tempCurrentDir["parent"]
@@ -51,10 +52,5 @@ do
     end
 end
 
+
 p(totalSize)
-
---[[
-    RECURSION
-
-return dirSize + calcDir(child)
-]]
