@@ -1,4 +1,4 @@
-local util = require("../util/util")
+local util = require("../../util/util")
 
 
 local LOSE_MAP = {
@@ -24,7 +24,7 @@ local totalScore = 0
 
 
 do
-    for i, l in ipairs(util.split(util.read(2), "\r\n")) do
+    for i, l in ipairs(util.split(util.read(2022, 2), "\r\n")) do
         local opp, decision = l:match("(%w) (%w)")
 
         -- determine our hand based on decision of game

@@ -1,11 +1,11 @@
-local util = require("../util/util")
+local util = require("../../util/util")
 
 
 local top = ""
 
 
 do
-    local input = util.read(5)
+    local input = util.read(2022, 5)
     local stacks = {}
 
     local rows, cols

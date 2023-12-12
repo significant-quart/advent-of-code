@@ -1,11 +1,11 @@
-local util = require("../util/util")
+local util = require("../../util/util")
 
 
 local overlapping = 0
 
 
 do
-    local input = util.read(4)
+    local input = util.read(2022, 4)
     for p1Lower, p1Upper, p2Lower, p2Upper in input:gmatch("(%d+)-(%d+),(%d+)-(%d+)[\r\n]?") do
         p1Lower, p1Upper, p2Lower, p2Upper = tonumber(p1Lower), tonumber(p1Upper), tonumber(p2Lower), tonumber(p2Upper)
 

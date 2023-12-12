@@ -4,8 +4,8 @@ local fs = require("fs")
 local F = string.format
 
 
-local function read(day)
-    return fs.readFileSync(F("./day%d/day%d.txt", day, day))
+local function read(year, day)
+    return fs.readFileSync(F("./%d/day%d/day%d.txt", year, day, day))
 end
 
 local function split(input, sep)

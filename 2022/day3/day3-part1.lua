@@ -1,11 +1,11 @@
-local util = require("../util/util")
+local util = require("../../util/util")
 
 
 local prioritySum = 0
 
 
 do
-    for i, l in ipairs(util.split(util.read(3), "\r\n")) do
+    for i, l in ipairs(util.split(util.read(2022, 3), "\r\n")) do
         local indexedChars = {}
         local midPoint = #l / 2
 

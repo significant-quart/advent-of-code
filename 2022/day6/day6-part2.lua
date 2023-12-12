@@ -1,8 +1,8 @@
-local util = require("../util/util")
+local util = require("../../util/util")
 
 
 do
-    local input = util.read(6)
+    local input = util.read(2022, 6)
 
     local seen = {}
 
@@ -13,14 +13,18 @@ do
 
         if #seen >= 2 then
             for y = 1, #seen - 1 do
+
+                -- only clear seen characters up to the duplicate
                 if seen[y] == char then
-                    seen = {char}
+                    for z = 1, y do
+                        table.remove(seen, 1)
+                    end
 
                     break
                 end
             end
 
-            if #seen == 4 then
+            if #seen == 14 then
                 p(i)
 
                 return

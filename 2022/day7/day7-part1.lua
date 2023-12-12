@@ -1,4 +1,4 @@
-local util = require("../util/util")
+local util = require("../../util/util")
 
 
 local totalSize = 0
@@ -15,7 +15,7 @@ do
 
     local command, arg, size, tempCurrentDir
 
-    for i, l in ipairs(util.split(util.read(7), "\r\n")) do
+    for i, l in ipairs(util.split(util.read(2022, 7), "\r\n")) do
         command, arg = l:match("^[$ ]*(%w+)%s?(.*)")
 
         if command == "cd" then

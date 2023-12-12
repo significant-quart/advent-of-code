@@ -1,4 +1,4 @@
-local util = require("../util/util")
+local util = require("../../util/util")
 
 
 local topThree = { 0, 0, 0 }
@@ -7,7 +7,7 @@ local topThree = { 0, 0, 0 }
 do
     local elfCalories = 0
 
-    for i, l in ipairs(util.split(util.read(1), "\n")) do
+    for i, l in ipairs(util.split(util.read(2022, 1), "\n")) do
         if l == "\r" then
             for y = 1, 3 do
                 if elfCalories > topThree[y] then

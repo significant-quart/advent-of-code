@@ -1,4 +1,4 @@
-local util = require("../util/util")
+local util = require("../../util/util")
 
 
 local prioritySum = 0
@@ -7,7 +7,7 @@ local prioritySum = 0
 do
     local indexedChars = {}
 
-    for i, l in ipairs(util.split(util.read(3), "\r\n")) do
+    for i, l in ipairs(util.split(util.read(2022, 3), "\r\n")) do
         local relativeIndex = (i % 3) + (i % 3 == 0 and 3 or 0)
 
         for y = 1, #l do

@@ -1,4 +1,4 @@
-local util = require("../util/util")
+local util = require("../../util/util")
 
 
 local maxCalories = 0
@@ -7,7 +7,7 @@ local maxCalories = 0
 do
     local elfCalories = 0
 
-    for _, l in ipairs(util.split(util.read(1), "\n")) do
+    for _, l in ipairs(util.split(util.read(2022, 1), "\n")) do
 
         -- if EOL find maximum between current highest and current count
         if l == "\r" then
